@@ -3,11 +3,20 @@
 //
 
 #include "Player.hpp"
+#include <iostream>
 
 // TO DO: implement Player's assignment operator
 Player& Player::operator=(const Player& p) {
+	if (this != &p) {
+		playerName = p.playerName;
+		position = p.position;
+		
+	}
+
+	return *this;
+
    // TODO: implement this function properly
-   throw std::logic_error("not implemented yet");
+
 }
 
 // return player's new position after player rolls die
