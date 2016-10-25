@@ -21,26 +21,32 @@ public:
    // player's initial position is at the figurative square 0
    // TO DO: implement this constructor
    Player(string name) {
+	   setName(name);
+	   setPostion(0);
       // TODO: implement this function properly
-      throw std::logic_error("not implemented yet");
+     
    }
    
    // copy constructor
    // Player should make player's own copy of the die
    // TO DO: implement Player's copy constructor
    Player(const Player &p) {
+	   playerName = p.playerName;
+	   position = p.position;
+	   
       // TODO: implement this function properly
-      throw std::logic_error("not implemented yet");
+     
    }
    
    // assignment constructor
    // Player should make player's own copy of the die
    // TO DO: implement Player's assignment constructor
    Player& operator=(const Player& p);
+	  
    
    // destructor
    ~Player() { }
-   
+ 
    // getters and setters
    void setName(string name) { playerName = name; }
    void setPostion(int location) { position = location; }
